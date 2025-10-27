@@ -1,0 +1,15 @@
+{
+  "name": "content-writer-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio for senior content writer",
+  "scripts": {
+    "dev": "echo 'Just open index.html in your browser'",
+    "build": "echo 'No build needed - static site'"
+  },
+  "keywords": [
+    "portfolio",
+    "content-writer",
+    "technical-writer"
+  ]
+}
+

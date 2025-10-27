@@ -1,0 +1,255 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║              🚀 VERCEL DEPLOYMENT GUIDE 🚀                        ║
+║           Fix for 404 NOT_FOUND Error                             ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+✅ PROBLEM SOLVED!
+
+I've added the required configuration files:
+• vercel.json - Tells Vercel how to serve your static site
+• package.json - Basic project metadata
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 DEPLOYMENT METHODS:
+
+═══════════════════════════════════════════════════════════════════
+
+METHOD 1: VERCEL CLI (Recommended)
+═══════════════════════════════════════════════════════════════════
+
+1. Install Vercel CLI:
+   npm install -g vercel
+   
+   OR
+   
+   curl -sL https://vercel.com/download | bash
+
+2. Navigate to your folder:
+   cd /home/harsh-soni/Documents/Temp/chaitali-portfolio
+
+3. Deploy:
+   vercel
+   
+4. Follow prompts:
+   • Login to your Vercel account
+   • Confirm project settings
+   • Deploy!
+
+5. For production:
+   vercel --prod
+
+═══════════════════════════════════════════════════════════════════
+
+METHOD 2: VERCEL WEB INTERFACE
+═══════════════════════════════════════════════════════════════════
+
+OPTION A: Direct Upload
+──────────────────────────────────────────────────────────────────
+1. Go to https://vercel.com
+2. Sign up/Login
+3. Click "Add New..." → "Project"
+4. Click "Deploy" (without connecting Git)
+5. Drag and drop your entire "chaitali-portfolio" folder
+6. Wait for deployment
+7. Done! Get your live URL
+
+OPTION B: GitHub Integration (Best for updates)
+──────────────────────────────────────────────────────────────────
+1. Create GitHub account at https://github.com
+2. Create new repository
+3. Upload all files from chaitali-portfolio folder
+4. Go to https://vercel.com
+5. Click "Add New..." → "Project"
+6. Import your GitHub repository
+7. Configure settings (see below)
+8. Deploy!
+
+═══════════════════════════════════════════════════════════════════
+
+⚙️ VERCEL PROJECT SETTINGS
+═══════════════════════════════════════════════════════════════════
+
+When deploying via GitHub, use these settings:
+
+Framework Preset: Other
+Build Command: (leave empty)
+Output Directory: .
+Install Command: (leave empty)
+
+Root Directory: ./
+(Leave as is if all files are in root)
+
+═══════════════════════════════════════════════════════════════════
+
+🔧 TROUBLESHOOTING 404 ERROR
+═══════════════════════════════════════════════════════════════════
+
+✅ FIXED - The vercel.json file I added should fix this!
+
+If you still get 404:
+
+1. Check File Structure:
+   ─────────────────────────────────────────────────────────────
+   Make sure these files are in the ROOT of your project:
+   ✓ index.html
+   ✓ vercel.json
+   ✓ package.json
+   ✓ styles.css
+   ✓ script.js
+   ✓ config.js
+
+2. Verify vercel.json exists:
+   ─────────────────────────────────────────────────────────────
+   The file I just created should be in your folder.
+   It tells Vercel to serve static files correctly.
+
+3. Clear Vercel Cache:
+   ─────────────────────────────────────────────────────────────
+   In Vercel dashboard:
+   • Go to your project
+   • Settings → General
+   • Scroll down
+   • Click "Clear Cache"
+   • Redeploy
+
+4. Check Build Settings:
+   ─────────────────────────────────────────────────────────────
+   In Vercel dashboard:
+   • Settings → General
+   • Build & Development Settings
+   • Framework Preset: "Other"
+   • Build Command: (empty)
+   • Output Directory: .
+   • Install Command: (empty)
+
+5. Redeploy:
+   ─────────────────────────────────────────────────────────────
+   • Go to Deployments tab
+   • Click "..." on latest deployment
+   • Click "Redeploy"
+
+═══════════════════════════════════════════════════════════════════
+
+📁 CORRECT FILE STRUCTURE FOR VERCEL
+═══════════════════════════════════════════════════════════════════
+
+chaitali-portfolio/
+├── index.html          ← Must be in root!
+├── styles.css
+├── script.js
+├── config.js
+├── config.BACKUP.js
+├── vercel.json         ← New! Fixes 404
+├── package.json        ← New! Project metadata
+├── README.md
+├── START-HERE.txt
+├── EDITING-GUIDE.txt
+├── HOW-TO-SHARE.txt
+└── VERCEL-DEPLOYMENT-GUIDE.txt
+
+⚠️ Make sure index.html is NOT in a subdirectory!
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 QUICK FIX STEPS
+═══════════════════════════════════════════════════════════════════
+
+If you already tried to deploy and got 404:
+
+1. ✅ DONE - vercel.json and package.json added
+2. Upload/push the updated files
+3. In Vercel dashboard → Redeploy
+4. Should work now!
+
+═══════════════════════════════════════════════════════════════════
+
+🌐 ALTERNATIVE: USE NETLIFY (Even Easier!)
+═══════════════════════════════════════════════════════════════════
+
+Netlify is actually easier for static sites:
+
+1. Go to https://netlify.com
+2. Sign up free
+3. Drag and drop the ENTIRE folder
+4. Instant deployment - NO configuration needed!
+5. Get free URL: your-site.netlify.app
+
+No vercel.json needed, no settings, just works! ✨
+
+═══════════════════════════════════════════════════════════════════
+
+📊 COMPARISON: VERCEL VS NETLIFY
+═══════════════════════════════════════════════════════════════════
+
+VERCEL:
+• Good for: React, Next.js, Node.js apps
+• Static sites: Needs configuration (vercel.json)
+• Free tier: Generous
+• Speed: Very fast
+
+NETLIFY:
+• Good for: Static sites (HTML/CSS/JS)
+• Static sites: Zero configuration needed
+• Free tier: Very generous
+• Speed: Very fast
+• Recommended for THIS portfolio ✓
+
+═══════════════════════════════════════════════════════════════════
+
+✅ RECOMMENDATION
+═══════════════════════════════════════════════════════════════════
+
+For this portfolio, I recommend:
+
+1st Choice: Netlify (easiest, zero config)
+2nd Choice: Vercel (with the vercel.json I added)
+3rd Choice: GitHub Pages (also free and easy)
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 DEPLOY RIGHT NOW - VERCEL CLI
+═══════════════════════════════════════════════════════════════════
+
+Open terminal and run:
+
+cd /home/harsh-soni/Documents/Temp/chaitali-portfolio
+npx vercel
+
+First time? It will:
+1. Ask you to login (opens browser)
+2. Ask project name (press Enter for default)
+3. Deploy!
+
+Get preview URL immediately!
+
+For production:
+npx vercel --prod
+
+═══════════════════════════════════════════════════════════════════
+
+📝 AFTER DEPLOYMENT
+═══════════════════════════════════════════════════════════════════
+
+Your site will be live at:
+https://your-project-name.vercel.app
+
+Or custom domain:
+https://your-domain.com
+
+You can update anytime by:
+1. Edit config.js locally
+2. Run: vercel --prod
+3. Changes go live!
+
+═══════════════════════════════════════════════════════════════════
+
+🎉 DONE!
+
+Your portfolio should now deploy successfully to Vercel!
+
+If you still have issues, just use Netlify instead - it's drag & drop
+with ZERO configuration needed.
+
+Happy deploying! 🚀
+
